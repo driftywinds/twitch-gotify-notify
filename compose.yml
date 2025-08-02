@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  twitch-monitor:
+    image: ghcr.io/driftywinds/twitch-gotify-notify:latest
+    container_name: twitch-gotify
+    restart: unless-stopped
+    volumes:
+      - ./.env:/app/.env
